@@ -1,0 +1,29 @@
+document.addEventListener("DOMContentLoaded", function () {
+    let scrollPosition = window.scrollY;
+    let easeFactor = 0.4; // Чем меньше значение, тем плавнее
+    let isScrolling = false;
+
+    function smoothScroll() {
+        let difference = window.scrollY - scrollPosition;
+        scrollPosition += difference * easeFactor;
+        window.scrollTo(0, scrollPosition);
+
+        if (Math.abs(difference) > 0.5) {
+            requestAnimationFrame(smoothScroll);
+        } else {
+            isScrolling = false;
+        }
+    }
+
+    function onScroll(event) {
+        event.preventDefault();
+        let delta = event.deltaY;
+        window.scrollTo(0, window.scrollY + delta);
+        if (!isScrolling) {
+            isScrolling = true;
+            requestAnimationFrame(smoothScroll);
+        }
+    }
+
+    window.addEventListener("wheel", onScroll, { passive: false });
+});

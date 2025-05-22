@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://valafar.cc/ -->
+<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_P5yLeH"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valafar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./ass1/style.css">
+    <link rel="shortcut icon" href="https://valafar.cc/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./ass1/stylesheet.css">
+<style>
+body {
+      
+      margin: 0;
+      
+      color: #fff;
+      font-family: "Exo 2", sans-serif, Arial, 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+    }
+
+    /* Затемнение фона */
+    #modal-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(15, 17, 18, 0.9);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Модальное окно */
+    #lang-modal {
+      background: linear-gradient(145deg, #181919 90%, #fa8231 130%);
+      border-radius: 22px;
+      box-shadow: 0 0 30px 8px #000, 0 0 24px 2px #fa823166;
+      padding: 30px 38px;
+      width: 350px;
+      text-align: center;
+      position: relative;
+    }
+
+
+
+    @media screen and (max-width: 430px) {
+  /* Модальное окно */
+    #lang-modal {
+      width: 70vw;
+      
+    }
+}
+
+
+    #lang-modal h2 {
+      
+      margin-bottom: 16px;
+      color: #fa8231;
+      font-weight: 600;
+      letter-spacing: .05em;
+    }
+    @media screen and (max-width: 376px) {
+  /* Модальное окно */
+    #lang-modal h2 {
+      
+      font-size: 1.4rem;
+    }
+}
+
+    #lang-modal p {
+      color: #bbbbbb;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+    }
+
+    .lang-btns {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .lang-btn {
+      flex: 1 1 0;
+      border: none;
+      border-radius: 16px;
+      font-size: 1.1rem;
+      padding: 14px 10px;
+      background: #181919;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      transition: box-shadow 0.2s, color 0.2s;
+      box-shadow: 0 0 2px 1px #fa823133;
+      outline: none;
+      position: relative;
+    }
+    @media screen and (max-width: 375px) {
+  /* Модальное окно */
+    .lang-btn {
+      font-size: 0.8rem;
+      
+    }
+}
+
+    .lang-btn:hover, .lang-btn:focus {
+      box-shadow: 0 0 12px 3px #fa8231aa, 0 0 2px 1px #fa8231aa;
+      color: #fa8231;
+    }
+
+    /* Close button */
+    #close-modal {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 1.2rem;
+      color: #fa8231b3;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      outline: none;
+      transition: color 0.2s;
+    }
+    #close-modal:hover {
+      color: #fff;
+    }
+
+
+
+
+@keyframes slide-in-one-tap {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+</style></head>
+
+<body>
+  
+<!-- Модальное окно выбора языка -->
+<div id="modal-bg">
+  <div id="lang-modal">
+    <button id="close-modal" title="Закрыть">&times;</button>
+    <h2>Вибери мову</h2>
+    
+    <div class="lang-btns">
+      <button class="lang-btn" onclick="selectLang('ru')">🇷🇺 Русский</button>
+      <button class="lang-btn" onclick="selectLang('uk')">🇺🇦 Український</button>
+    </div>
+  </div>
+</div>
+
+    <div class="page-wrapper">
+        <div class="content-wrapper">
+            <div class="left-side">
+                <div class="owner-details">
+                    <div class="owner-image-wrapper">
+                        <img src="./ass1/owner-image.png" alt="" class="owner-image">
+                    </div>
+                    <div class="owner-name-details">
+                        <h1 class="owner-name">PAPA-DIYA</h1>
+                        <span class="owner-position">PD</span>
+                    </div>
+                    <p id="P1" class="owner-description">
+                        Ми надаємо доступ до копії додатку Дія, яку ви зможете повністю налаштовувати через нашого бота. Наш додаток постійно оновлюється та отримує всі нові функції, що з’являються в офіційній Дії. <br>
+                        <br></p>
+                        <p class="owner-description">
+                        <span id="PH2" style="color: #E8E8E8;">У нас є документи:</span><br>
+                        <span id="P2">
+                        1. <span>єДокумент</span><br>
+                        2. <span>Паспорт</span><br>
+                        3. <span>Посвідчення водія</span><br>
+                        4. <span>Закордонний паспорт</span><br>
+                        5. <span>Студентський квиток</span><br>
+                        6. <span>Диплом вищої освіти</span><br>
+                        </span>
+                    </p>
+                </div>
+                <a href="#" class="primary-button">
+                    <div class="button-state default">
+                        <img id="Z1" src="./ass1/info-circle.svg" alt="">
+                        Замовити зараз
+                    </div>
+                    <div class="button-state hover">
+                        <img id="Z2" src="./ass1/navigation.svg" alt="">
+                        Перейти до Telegram
+                    </div>
+                </a>
+            </div>
+            <div class="right-side">
+                <div class="link-section">
+                    <div id="l1" class="label-section">Корисні посилання</div>
+                    <div class="link-items">
+                        <a href="#" target="_blank" class="link-card">
+                            <div class="link-bg-default"></div>
+                            <div class="link-bg-hover"></div>
+                            <div class="link-icon-type">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 5.37259 5.37259 0 12 0C18.6274 0 24 5.37259 24 12C24 18.6274 18.6274 24 12 24C5.37259 24 0 18.6274 0 12ZM6.13333 9.8H6.82715C6.76603 10.4879 6.73333 11.2197 6.73333 12C6.73333 12.7803 6.76603 13.5121 6.82715 14.2H2.92745C2.75698 13.4945 2.66667 12.7579 2.66667 12C2.66667 9.6 3.2 8.13333 3.2 8.13333H4.26667C4.13333 8.93333 4.8 9.8 6.13333 9.8ZM3.95423 16.7333H7.21449C7.42787 17.686 7.70293 18.535 8.02057 19.3004C8.23683 19.8214 8.4709 20.2988 8.7144 20.7386C6.70761 19.9837 5.02963 18.5573 3.95423 16.7333ZM9.82219 16.7333C9.97909 17.3221 10.1618 17.8508 10.3604 18.3293C10.8329 19.4677 11.4092 20.3575 12 21.1347C12.5908 20.3575 13.1671 19.4677 13.6396 18.3293C13.8382 17.8508 14.0209 17.3221 14.1778 16.7333H9.82219ZM16.7855 16.7333C16.5722 17.686 16.2971 18.535 15.9794 19.3004C15.7632 19.8214 15.5291 20.2988 15.2857 20.7386C17.2924 19.9837 18.9703 18.5573 20.0458 16.7333H16.7855ZM17.8533 14.2C19.1867 14.2 19.8533 15.0667 19.72 15.8667H20.7867C20.7867 15.8667 21.3333 14.5333 21.3333 12.1333C21.334 12.0891 21.3333 12.0445 21.3333 12C21.3333 11.2421 21.243 10.5055 21.0725 9.8H17.1728C17.2339 10.4879 17.2667 11.2197 17.2667 12C17.2667 12.7803 17.2339 13.5121 17.1728 14.2H17.8533ZM14.6283 14.2H9.37176C9.30403 13.5267 9.26667 12.7957 9.26667 12C9.26667 11.2043 9.30403 10.4733 9.37176 9.8H14.6283C14.696 10.4733 14.7333 11.2043 14.7333 12C14.7333 12.7957 14.696 13.5267 14.6283 14.2ZM3.95423 7.26667C5.02963 5.44263 6.70761 4.01629 8.7144 3.2614C8.4709 3.70118 8.23683 4.17854 8.02057 4.69965C7.70293 5.46497 7.42787 6.31407 7.21449 7.26667H3.95423ZM14.1778 7.26667C14.0209 6.67785 13.8382 6.14921 13.6396 5.67072C13.1671 4.53229 12.5908 3.64242 12 2.86533C11.4092 3.64242 10.8329 4.53229 10.3604 5.67072C10.1618 6.14921 9.97909 6.67785 9.82219 7.26667H14.1778ZM20.0458 7.26667C18.9703 5.44263 17.2924 4.01629 15.2857 3.2614C15.5291 3.70118 15.7632 4.17854 15.9794 4.69965C16.2971 5.46497 16.5722 6.31407 16.7855 7.26667H20.0458Z" fill=""></path>
+                                </svg>
+                            </div>
+                            <div class="link-icon-arrow"></div>
+                            <h2 class="link-name">PD | Канал</h2>
+                            <p id="D1" class="link-description">У каналі ви зможете переглянути весь функціонал і бачити новини про Дію.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="link-items">
+                        <a href="#" target="_blank" class="link-card">
+                            <div class="link-bg-default"></div>
+                            <div class="link-bg-hover"></div>
+                            <div class="link-icon-type">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 3.25H21.75V23.25H20.9105C19.916 23.25 18.9621 22.8549 18.2589 22.1517L15.1072 19H2.25V3.25ZM19.25 19.6072V5.75H6.75C4.5 5.75 3.25 5.5 3.25 5.5V6.5C4 6.75 4.75 7.5 4.75 9.25V16.5H16.1428L19.25 19.6072Z" fill=""></path>
+                                </svg>
+                            </div>
+                            <div class="link-icon-arrow"></div>
+                            <h2 id="DH2" class="link-name">PD | Відгуки</h2>
+                            <p id="D2" class="link-description">Це наш канал з відгуками про нашу фейк Дію.</p>
+                        </a>
+                        <a href="#" target="_blank" class="link-card">
+                            <div class="link-bg-default"></div>
+                            <div class="link-bg-hover"></div>
+                            <div class="link-icon-type">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 0C12.0463 0 13.1122 0.98667 13.2377 2.25H14.3248C15.3644 2.25 16.3744 2.59654 17.1951 3.23482C18.3339 4.12057 19 5.48249 19 6.92522V8.25H18.5C17.3954 8.25 16.6809 7.32158 16.3695 6.26179C16.2533 5.86618 16.0417 5.50493 15.6602 5.20821C15.2784 4.91123 14.8085 4.75 14.3248 4.75H13.75C12.75 4.75 11.75 4.5 11.75 4.5V5.5C12.5 5.75 13.25 6.25 13.25 8V10.8689L15.6275 11.389C16.1837 11.5106 16.7164 11.7221 17.2046 12.015L17.2861 12.0639C18.8147 12.9811 19.75 14.633 19.75 16.4157C19.75 17.7616 19.2153 19.0524 18.2636 20.0042L18.1339 20.1339C17.0991 21.1687 15.6956 21.75 14.2322 21.75H13.25V24C11.9537 24 10.8878 23.0133 10.7623 21.75H9.76777C8.30436 21.75 6.9009 21.1687 5.86612 20.1339C4.83133 19.0991 4.25 17.6956 4.25 16.2322V14.75H4.75C5.85457 14.75 6.64035 15.6574 6.82926 16.7457C6.93136 17.3339 7.15427 17.8865 7.63388 18.3661C8.19982 18.9321 8.96741 19.25 9.76777 19.25H10.25H10.2548C11.2532 19.2508 12.25 19.5 12.25 19.5V18.5C11.5 18.25 10.75 17.75 10.75 16V12.8811L8.94587 12.4865C7.89671 12.257 6.94885 11.6969 6.24163 10.8887C5.4412 9.97389 5 8.79967 5 7.58414V7.1302C5 5.73623 5.59611 4.4088 6.63797 3.48269C7.5313 2.68863 8.68497 2.25 9.8802 2.25H10.75V0ZM9.8802 4.75H10.75V10.322L9.48011 10.0442C8.95362 9.92905 8.47797 9.64801 8.12307 9.24242C7.7214 8.78336 7.5 8.19411 7.5 7.58414V7.1302C7.5 6.45032 7.79074 5.8029 8.29888 5.35122C8.73458 4.96393 9.29725 4.75 9.8802 4.75ZM13.25 19.25V13.428L15.0933 13.8312C15.3842 13.8949 15.6629 14.0055 15.9183 14.1587L15.9998 14.2076C16.7754 14.673 17.25 15.5112 17.25 16.4157C17.25 17.0986 16.9787 17.7535 16.4958 18.2364L16.3661 18.3661C15.8002 18.9321 15.0326 19.25 14.2322 19.25H13.25Z" fill=""></path>
+                                </svg>
+                            </div>
+                            <div class="link-icon-arrow"></div>
+                            <h2 class="link-name">Питання - Відповідь</h2>
+                            <p class="link-description">Тут ми відповімо на популярні питання щодо Фейк-Дії.</p>
+                        </a>
+                         <a href="#" target="_blank" class="link-card">
+                            <div class="link-bg-default"></div>
+                            <div class="link-bg-hover"></div>
+                            <div class="link-icon-type">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.63379L21.75 5.93526V10.2694C21.75 15.7036 18.1699 20.4883 12.9565 22.0216L12 22.303L11.0435 22.0216C5.83008 20.4883 2.25 15.7036 2.25 10.2694V5.93526L12 1.63379ZM4.41717 6.04528C4.93697 6.6242 5.9255 7.01014 7.48663 6.35747L12 4.36627L16.5134 6.35746C18.0745 7.01014 19.063 6.6242 19.5828 6.04528L20.5 6.44379C20.5 6.44379 19.25 8.00006 19.25 9.75006V10.2694C19.25 14.5946 16.4006 18.4028 12.2511 19.6232L12 19.6971L11.7489 19.6232C7.59945 18.4028 4.75 14.5946 4.75 10.2694V9.74874C4.74937 7.99928 3.5 6.44379 3.5 6.44379L4.41717 6.04528Z" fill=""></path>
+                                </svg>
+                            </div>
+                            <div class="link-icon-arrow"></div>
+                            <h2 class="link-name">Приклад програми</h2>
+                            <p class="link-description">Реальний тест нашої програми доступний кожному!</p>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <script>function selectLang(lang) {
+    // здесь можно добавить сохранение и смену языка, сейчас просто закрывает модалку
+    document.getElementById('modal-bg').style.display = 'none';
+    if (lang === 'ru') {
+    // Переводим текст на русский
+    document.getElementById('P1').innerText = translations[lang].P1;
+    document.getElementById('P2').innerHTML = translations[lang].P2;
+    document.getElementById('PH2').innerHTML = translations[lang].PH2;
+    document.getElementById('Z1').innerText = translations[lang].Z1;
+    document.getElementById('Z2').innerText = translations[lang].Z2;
+    document.getElementById('l1').innerText = translations[lang].l1;
+    document.getElementById('D1').innerText = translations[lang].D1;
+    document.getElementById('DH2').innerText = translations[lang].DH2;
+    document.getElementById('D2').innerText = translations[lang].D2;
+    
+    // скрытие после выбора
+    document.getElementById('modal-bg').style.display = 'none';
+  } else if (lang === 'ua') {
+    // Скрываем модальное окно
+    document.getElementById('modal-bg').style.display = 'none';
+    // Можно показать уведомление
+    // alert('Выбран язык: Українська');
+  }
+  } 
+  
+
+  // Кнопка закрытия
+  document.getElementById('close-modal').onclick = function() {
+    document.getElementById('modal-bg').style.display = 'none';
+  };
+  
+  const translations = {
+  ru: {
+    P1: 'Мы предоставляем доступ к копии приложения Дія, которое вы сможете полностью настраивать через наш бот. Наше приложение постоянно обновляется и получает все новые функции, появляющиеся в официальной Дія.',
+    PH2: '<br>У нас есть документы:',
+    P2: '1. єДокумент<br>2. Паспорт<br>3. Водительское удостоверение<br>4. Загранпаспорт<br>5. Студенческий билет<br>6. Диплом высшего образования<br>',
+    Z1: 'Заказать сейчас',
+    Z2: 'Перейти в Telegram',
+    l1: 'Полезные ссылки',
+    D1: 'В канале вы сможете просмотреть весь функционал и видеть новости о Дію.',
+    DH2: 'PD | Отзывы',
+    D2: 'Это наш канал с отзывами о нашем фейке Дію.',
+  }};
+
+
+  
+  
+  </script>
+
+
+
+<div style="all: unset;"><div style="all: unset;"><template shadowrootmode="closed"><link rel="stylesheet" href="chrome-extension://gbefmodhlophhakmoecijeppjblibmie/contentscript.css"></template></div></div></body></html>
